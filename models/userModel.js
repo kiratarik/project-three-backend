@@ -5,8 +5,10 @@ import mongooseUniqueValidator from 'mongoose-unique-validator'
 const userSchema = mongoose.Schema({
   username: { type: String, required: true, unique: true },
   email: { type: String, required: true, unique: true },
-  password: { type: String, reequired: true },
+  password: { type: String, required: true },
   isAdmin: { type: Boolean }, 
+  myUploads: { type: Array },
+  myCollections: { type: Array },
 })
 
 userSchema

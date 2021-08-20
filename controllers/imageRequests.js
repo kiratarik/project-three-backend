@@ -41,7 +41,20 @@ async function deleteImage(req, res){
     await imageToDelete.remove()
     return res.status(200).json(imageToDelete)
   } catch (err){
-    console.log(err.statusMessage)
+    console.log(err)
+  }
+}
+
+async function editImage(req, res){
+  const { imageId } = req.params
+  try {
+    const imageToEdit = await Image.findById(imageId)
+    if (!imageToEdit) throw new Error()
+    Object.assign(imageToEdit, req.body)
+    await imageToEdit.save()
+    res.status(202).json(imageToEdit)
+  } catch (err){
+    console.log(err)
   }
 }
 
@@ -49,5 +62,6 @@ export default {
   show: getImage,
   post: postImage,
   index: getAllImages,
-  delete: deleteImage,
+  removeImage: deleteImage,
+  edit: editImage,
 }

@@ -11,8 +11,15 @@ router.route('/images')
 
 router.route('/images/:imageId')
   .get(Images.show)
-  .delete(Images.delete)
+  .delete(Images.removeImage)
+  .put(Images.edit)
 
+
+router.route('/signUp')
+  .post
+
+router.route('/signIn')
+  .get
 export default router
 
 
