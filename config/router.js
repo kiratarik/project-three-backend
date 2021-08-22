@@ -8,8 +8,6 @@ router.route('/images')
   .get(Images.index)
   .post(Images.post)
 
-
-
 router.route('/images/:imageId')
   .get(Images.show)
   .delete(Images.removeImage)

@@ -1,65 +1,67 @@
 import Image from '../models/imageModel.js'
+import { NotFound } from '../lib/errors.js'
 
-async function getAllImages(req, res){
+async function getAllImages(_req, res, next){
   try {
     const allImages = await Image.find()
     if (!allImages) throw new Error()
     return res.status(202).json(allImages)
   } catch (err) {
-    console.log(err)
+    next(err)
   }
 }
 
-
-async function getImage(req, res){
+async function getImage(req, res, next){
   const { imageId } = req.params
   try {
     const imageGet = await Image.findById(imageId)
-    if (!imageGet) throw new Error()
+    if (!imageGet) throw new NotFound()
     return res.status(200).json(imageGet)
   } catch (err){
-    console.log(err)
+    next(err)
   }
 }
 
-async function postImage(req, res){
+async function postImage(req, res, next){
   try {
     const imageToPost = await Image.create(req.body)
     if (!imageToPost) throw new Error()
     return res.status(201).json(imageToPost)
   } catch (err) {
-    console.log(err)
+    next(err)
   }
 }
 
 
-async function deleteImage(req, res){
+async function deleteImage(req, res, next){
   const { imageId } = req.params
   try { 
     const imageToDelete = await Image.findById(imageId)
-    if (!imageToDelete) throw new Error()
+    if (!imageToDelete) throw new NotFound()
     await imageToDelete.remove()
     return res.status(200).json(imageToDelete)
   } catch (err){
-    console.log(err)
+    next(err)
   }
 }
 
-async function editImage(req, res){
+// * not throwing 422...
+
+async function editImage(req, res, next){
   const { imageId } = req.params
   try {
     const imageToEdit = await Image.findById(imageId)
-    if (!imageToEdit) throw new Error()
+    if (!imageToEdit) throw new NotFound()
     Object.assign(imageToEdit, req.body)
     await imageToEdit.save()
     res.status(202).json(imageToEdit)
   } catch (err){
-    console.log(err)
+    next(err)
   }
 }
 
 
-async function addRating (req, res){
+async function addRating (req, res, next){
   const { imageId } = req.params
   const { currentUser } = req.body
   try { 
@@ -71,11 +73,11 @@ async function addRating (req, res){
     await imageToRate.save()
     return res.status(201).json(createRating)
   } catch (err) {
-    console.log(err)
+    next(err)
   }
 }
 
-async function deleteRating(req, res){
+async function deleteRating(req, res, next){
   const { imageId, ratingId } = req.params
   const { currentUser } = req
   try {
@@ -90,7 +92,7 @@ async function deleteRating(req, res){
     await image.save()
     return res.sendStatus(204)
   } catch (err){
-    console.log(err)
+    next(err)
   }
 }
 
