@@ -19,8 +19,8 @@ const imageSchema = new mongoose.Schema({
   rating: [ratingSchema],
   addedBy: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
   tags: tagSchema,
-  longitude: { type: Number },
   latitude: { type: Number },
+  longitude: { type: Number },
 })
 
 

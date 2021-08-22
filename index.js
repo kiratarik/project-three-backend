@@ -2,11 +2,12 @@ import express from 'express'
 import mongoose from 'mongoose'
 import router from './config/router.js'
 
+import { dbURI } from './config/configData.js'
+import { port } from './config/configData.js'
 
-const port = 4000
-const dbURI = 'mongodb://localhost/picturest-db'
 
 const app = express()
+app.use(express.json())
 
 function connectDb() {
   return mongoose.connect(dbURI, {
@@ -23,6 +24,7 @@ async function listenPort() {
     app.listen(port, ()=> console.log(`the server is running on ${port}`))
   } catch (err) {
     console.log('there was a problem connecting to the database')
+    console.log(err)
   }
 }
 
