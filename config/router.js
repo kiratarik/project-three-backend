@@ -16,7 +16,7 @@ router.route('/images/:imageId')
   .put(Images.edit)
 
 router.route('/images/:imageId/rating')
-  .get(Images.postRating)
+  .post(Images.postRating)
 
 router.route('/images/:imageId/rating/:ratingId')
   .delete(Images.removeRating) 

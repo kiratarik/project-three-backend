@@ -61,7 +61,7 @@ async function editImage(req, res){
 
 async function addRating (req, res){
   const { imageId } = req.params
-  const { currentUser } = req
+  const { currentUser } = req.body
   try { 
     const imageToRate = await Image.findById(imageId)
     if (!imageToRate) throw new Error()
