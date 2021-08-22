@@ -2,17 +2,22 @@ import mongoose from 'mongoose'
 import bcrypt from 'bcrypt'
 import mongooseUniqueValidator from 'mongoose-unique-validator'
 
+const collectionsSchema = mongoose.Schema({
+  collectionName: { type: String, required: true },
+  collectionArray: [{ type: mongoose.Schema.ObjectId, ref: 'Image' }],
+})
+
 const userSchema = mongoose.Schema({
   username: { type: String, required: true, unique: true },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
   isAdmin: { type: Boolean }, 
-  myUploads: { type: Array },
-  myCollections: { type: Array },
+  myCollections: [collectionsSchema],
+  myFollows: [{ type: mongoose.Schema.ObjectId, ref: 'User' }],
 })
 
 userSchema
-  .virtual('passworConfirmation')
+  .virtual('passwordConfirmation')
   .set(function(passwordConfirmation){
     this._passwordConfirmation = passwordConfirmation 
   })
@@ -21,7 +26,7 @@ userSchema
 userSchema
   .pre('validate', function(next){
     if (this.isModified('password') && this.password !== this._passwordConfirmation){
-      this.invalidate('passworConfirmation', 'does not match')
+      this.invalidate('passwordConfirmation', 'does not match')
     }
     next()
   })
@@ -40,6 +45,6 @@ userSchema.methods.validatePassword = function(password) {
 
 userSchema.plugin(mongooseUniqueValidator)
 
-const User = mongoose.model('user', userSchema)
+const User = mongoose.model('User', userSchema)
 
 export default User

@@ -1,5 +1,6 @@
 import express from 'express'
 import Images from '../controllers/imageRequests.js'
+import Users from '../controllers/userRequests.js'
 
 const router = express.Router()
 
@@ -14,12 +15,21 @@ router.route('/images/:imageId')
   .delete(Images.removeImage)
   .put(Images.edit)
 
+router.route('/images/:imageId/rating')
+  .get(Images.postRating)
+
+router.route('/images/:imageId/rating/:ratingId')
+  .delete(Images.removeRating) 
 
 router.route('/signUp')
-  .post
+  .post(Users.signUp)
 
 router.route('/signIn')
-  .get
+  .post(Users.logIn)
+
+router.route('/user')
+  .post(Users.show)
+
 export default router
 
 

@@ -1,12 +1,30 @@
 import mongoose from 'mongoose'
+import mongooseUniqueValidator from 'mongoose-unique-validator'
+
+const tagSchema = new mongoose.Schema({
+  types: [{ type: String }],
+  locations: [{ type: String }],
+  customs: [{ type: String }],
+})
+
+const ratingSchema = new mongoose.Schema({
+  text: { type: String },
+  rating: { type: Number, required: true, min: 1, max: 5 },
+  addedBy: { type: mongoose.Schema.ObjectId,  ref: 'User', required: true },
+})
 
 const imageSchema = new mongoose.Schema({
   url: { type: String, required: true, unique: true },
   picName: { type: String, required: true, unique: true },
-  rating: { type: Number },
-  AddedBy: { type: String, required: true },
-  tags: { type: Array, required: true },
+  rating: [ratingSchema],
+  addedBy: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
+  tags: tagSchema,
+  longitude: { type: Number },
+  latitude: { type: Number },
 })
+
+
+imageSchema.plugin(mongooseUniqueValidator)
 
 const Image = mongoose.model('image', imageSchema)
 
