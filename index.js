@@ -1,26 +1,19 @@
 import express from 'express'
-import mongoose from 'mongoose'
 import router from './config/router.js'
-
-import { dbURI } from './config/configData.js'
+import { connectDb } from './db/helper.js'
 import { port } from './config/configData.js'
-
+import logger from './lib/logger.js'
 
 const app = express()
+
 app.use(express.json())
+app.use('/', logger)
+app.use(router)
 
-function connectDb() {
-  return mongoose.connect(dbURI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-  })
-}
-
-async function listenPort() {
+async function startServer() {
   try {
     await connectDb()
-    console.log('databse connected')
+    console.log('database connected')
     app.listen(port, ()=> console.log(`the server is running on ${port}`))
   } catch (err) {
     console.log('there was a problem connecting to the database')
@@ -28,19 +21,9 @@ async function listenPort() {
   }
 }
 
-listenPort()
+startServer()
 
 
 
-
-
-app.use(express.json())
-
-app.use('/', (req, res, next) => {
-  console.log(`there is a ${req.method} request from ${req.url}`)
-  next()
-})
-
-app.use(router)
 
 
