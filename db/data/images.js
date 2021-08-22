@@ -5,7 +5,7 @@ export default [
     picName: 'Mountains by the sea in Lofoten, Norway',
     tags: {
       types: ['mountains', 'ocean'],
-      locations: ['Lofoten, Norway'],
+      locations: ['Lofoten', 'Norway'],
       customs: [],
     },
     latitude: 52.760368,
