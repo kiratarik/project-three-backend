@@ -39,7 +39,7 @@ async function deleteImage(req, res, next){
     const imageToDelete = await Image.findById(imageId)
     if (!imageToDelete) throw new NotFound()
     await imageToDelete.remove()
-    return res.status(200).json(imageToDelete)
+    return res.status(204)
   } catch (err){
     next(err)
   }

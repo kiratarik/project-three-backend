@@ -1,8 +1,9 @@
 import User from '../models/userModel.js'
 import jwt from 'jsonwebtoken'
 import { secret } from '../config/configData.js'
+import { Unauthorized } from '../lib/errors.js'
 
-async function getUserProfile( req, res ) {
+async function getUserProfile( req, res, next ) {
   try {
     const userProfile = await User.findOne({ email: req.body.email })
     if (!userProfile) throw new Error()
@@ -13,26 +14,26 @@ async function getUserProfile( req, res ) {
       following: `${userProfile.myFollows}`,
     })
   } catch (err) {
-    console.log(err)
+    next(err)
   }
 }
 
-async function createUserProfile( req, res ){
+async function createUserProfile( req, res, next ){
   try {
     const createProfile = await User.create(req.body)
     if (!createProfile) throw new Error()
     return res.status(200).json({
       message: `welcome ${createProfile.username}` })
   } catch (err) {
-    console.log(err)
+    next(err)
   }
 }  
 
 
-async function accessUserProfile( req, res){
+async function accessUserProfile( req, res, next){
   try {
     const userProfile = await User.findOne({ email: req.body.email })          
-    if (!userProfile || !userProfile.validatePassword(req.body.password)) throw new Error()
+    if (!userProfile || !userProfile.validatePassword(req.body.password)) throw new Unauthorized()
 
     const token = jwt.sign({ sub: userProfile._id }, secret, { expiresIn: '1 day' })
 
@@ -41,7 +42,7 @@ async function accessUserProfile( req, res){
       token,
     })
   } catch (err) {
-    console.log(err)
+    next(err)
   }
 }
 
