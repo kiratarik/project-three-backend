@@ -26,8 +26,8 @@ router.route('/signUp')
 router.route('/signIn')
   .post(Users.logIn)
 
-router.route('/user')
-  .post(Users.show)
+router.route('/users/:userId')
+  .get(Users.show)
 
 
 

@@ -5,7 +5,8 @@ import { Unauthorized } from '../lib/errors.js'
 
 async function getUserProfile( req, res, next ) {
   try {
-    const userProfile = await User.findOne({ email: req.body.email })
+    const { userId } = req.params
+    const userProfile = await User.findById(userId)
     if (!userProfile) throw new Error()
     return res.status(200).json({
       id: `${userProfile._id}`,
