@@ -1,12 +1,6 @@
 import mongoose from 'mongoose'
 import mongooseUniqueValidator from 'mongoose-unique-validator'
 
-const tagSchema = new mongoose.Schema({
-  types: [{ type: String }],
-  locations: [{ type: String }],
-  customs: [{ type: String }],
-})
-
 const ratingSchema = new mongoose.Schema({
   text: { type: String },
   rating: { type: Number, required: true, min: 1, max: 5 },
@@ -18,7 +12,11 @@ const imageSchema = new mongoose.Schema({
   picName: { type: String, required: true, unique: true },
   rating: [ratingSchema],
   addedBy: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
-  tags: tagSchema,
+  tags: {
+    types: [{ type: String }],
+    locations: [{ type: String }],
+    customs: [{ type: String }],
+  },
   latitude: { type: Number },
   longitude: { type: Number },
 })
