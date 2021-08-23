@@ -26,18 +26,13 @@ async function seed(){
 
     console.log('💾 Admin created')
 
-    imageData.forEach(image => {
-      image.addedBy = adminUser  
-    })
-
-    console.log('Admin user is added by')
 
     const users = []
 
     for (let index = 0; index < 50; index++) {
       const username = faker.internet.userName()
       const firstName = faker.name.firstName()
-      const email = `${firstName}@email.com`
+      const email = `${firstName}${index}@email.com`
       users.push({
         username,
         email,
@@ -50,7 +45,17 @@ async function seed(){
     }
 
     const createdUsers = await User.create(users)
+
+    console.log('💾 50 Users created')
+
+
+    imageData.forEach(image => {
+      image.addedBy = createdUsers[Math.floor(Math.random() * users.length)] 
+    })
+
+    console.log('💾 Images assigned users')
     
+
     const image = await Image.create(imageData)
 
     console.log(`Number of images added: ${image.length},
