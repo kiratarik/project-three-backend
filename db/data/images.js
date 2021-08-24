@@ -5,7 +5,7 @@ export default [
     picName: 'Mountains by the sea in Lofoten, Norway',
     tags: {
       types: ['Mountains', 'Ocean'],
-      locations: ['Norway'],
+      locations: ['Norway'], //Error
       customs: [],
     },
     latitude: 52.760368,
@@ -17,7 +17,7 @@ export default [
     picName: 'Snowy mountains, Iceland',
     tags: {
       types: ['Mountains'],
-      locations: ['Iceland'],
+      locations: ['Europe', 'Iceland', 'Húnavatnshreppur'],
       customs: [],
     },
     latitude: 64.963051,
@@ -29,7 +29,7 @@ export default [
     picName: 'Sunrise at Platja de Muro, Spain',
     tags: {
       types: ['Ocean'],
-      locations: ['Spain'],
+      locations: ['Europe', 'Spain', 'Muro, Majorca'],
       customs: [],
     },
     latitude: 39.81065,
@@ -41,7 +41,7 @@ export default [
     picName: 'Sunset at State Park Lane, Bagley, Wyalusing, WI, USA',
     tags: {
       types: ['Forest'],
-      locations: ['USA'],
+      locations: ['USA'], //Error
       customs: [],
     },
     latitude: 39.81065,
@@ -53,7 +53,7 @@ export default [
     picName: 'Crescent moon over snowy mountains in Argentina',
     tags: {
       types: ['Mountains'],
-      locations: ['Argentina'],
+      locations: ['South America', 'Argentina', 'El Chaltén'],
       customs: [],
     },
     latitude: -49.32897,
@@ -65,7 +65,7 @@ export default [
     picName: 'Clouds over mountains in Hawaii',
     tags: {
       types: ['Mountains'],
-      locations: ['Hawaii'],
+      locations: ['Oceania', 'United States of America', 'Kauai'],
       customs: [],
     },
     latitude: 21.967581,
@@ -77,7 +77,7 @@ export default [
     picName: 'Wildflowers at sunset in a Swiss valley',
     tags: {
       types: ['Valley', 'Mountains', 'Lake'],
-      locations: ['Switzerland'],
+      locations: ['Europe', 'Switzerland', 'Châtel-Saint-Denis'],
       customs: [],
     },
     latitude: 46.5169,
@@ -89,7 +89,7 @@ export default [
     picName: 'A butterfly resting',
     tags: {
       types: ['Flowers'],
-      locations: ['USA'],
+      locations: ['North America', 'United States of America', 'Timber Pines'],
       customs: [],
     },
     latitude: 28.46423,
@@ -101,7 +101,7 @@ export default [
     picName: 'Sunrise in the woods in Vladivostok',
     tags: {
       types: ['Forest'],
-      locations: ['Russia'],
+      locations: ['Asia', 'Russia', 'Leninskiy rayon'],
       customs: [],
     },
     latitude: 43.11576,
@@ -113,10 +113,10 @@ export default [
     picName: 'Birds over a lake in Botswana',
     tags: {
       types: ['Lake'],
-      locations: ['Botswana'],
+      locations: ['Africa', 'Botswana', 'Central Kalahari Game Reserve'],
       customs: [],
     },
-    latitude: 22.3285,
+    latitude: -22.3285,
     longitude: 24.6849,
   },
 
@@ -125,7 +125,7 @@ export default [
     picName: 'Sea cliffs in Ireland',
     tags: {
       types: ['Cliffs', 'Ocean'],
-      locations: ['Ireland'],
+      locations: ['Europe', 'Ireland', 'Shanbally'],
       customs: [],
     },
     latitude: 54.6401,
@@ -137,7 +137,7 @@ export default [
     picName: 'Swimming turtle in Aruba',
     tags: {
       types: ['Ocean'],
-      locations: ['Aruba'],
+      locations: ['Arabian Sea'],
       customs: [],
     },
     latitude: 12.5211,
@@ -149,7 +149,7 @@ export default [
     picName: 'Waterfall in Big Sky Park',
     tags: {
       types: ['Waterfall'],
-      locations: ['USA'],
+      locations: ['North America', 'United States of America', 'Big Sky'],
       customs: [],
     },
     latitude: 45.24577,
@@ -161,7 +161,7 @@ export default [
     picName: 'Jetty on a lake in Wisconsin',
     tags: {
       types: ['Lake'],
-      locations: ['USA'],
+      locations: ['North America', 'United States of America', 'Madison'],
       customs: [],
     },
     latitude: 43.073929,
@@ -173,7 +173,7 @@ export default [
     picName: 'Sunset in the woods',
     tags: {
       types: ['Forest'],
-      locations: ['USA'],
+      locations: ['North America', 'United States of America', 'Martinez'],
       customs: [],
     },
     latitude: 38.01899,
@@ -185,7 +185,7 @@ export default [
     picName: 'Icy mountains',
     tags: {
       types: ['Mountains'],
-      locations: ['Iceland'],
+      locations: ['Europe', 'Iceland', 'Miðborg'],
       customs: [],
     },
     latitude: 64.14721,
@@ -197,11 +197,11 @@ export default [
     picName: 'A stag in Scotland',
     tags: {
       types: ['Valley'],
-      locations: ['Scotland'],
+      locations: ['Europe', 'United Kingdom', 'Loch Tay'],
       customs: [],
     },
     latitude: 56.4907,
-    longitude: 4.2026,
+    longitude: -4.2026,
   },
 
   {
@@ -209,7 +209,7 @@ export default [
     picName: 'Mountains across the valley in China',
     tags: {
       types: ['Mountains', 'Valley'],
-      locations: ['China'],
+      locations: ['Asia', `People's Republic of China`, 'Barkam'],
       customs: [],
     },
     latitude: 31.8994,
