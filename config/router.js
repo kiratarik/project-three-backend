@@ -28,6 +28,7 @@ router.route('/signIn')
 
 router.route('/users/:userId')
   .get(Users.show)
+  .put(secureRoute, Users.edit)
 
 
 

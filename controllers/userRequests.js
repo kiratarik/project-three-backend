@@ -35,11 +35,9 @@ async function accessUserProfile( req, res, next){
   try {
     const userProfile = await User.findOne({ email: req.body.email })          
     if (!userProfile || !userProfile.validatePassword(req.body.password)) throw new Unauthorized()
-
     const token = jwt.sign({ sub: userProfile._id }, secret, { expiresIn: '1 day' })
-
     return res.status(202).json({
-      message: `welcome back ${userProfile.username}`,
+      message: `Welcome back ${userProfile.username}`,
       token,
     })
   } catch (err) {
@@ -47,10 +45,24 @@ async function accessUserProfile( req, res, next){
   }
 }
 
+async function editUserProfile( req, res, next){
+  try {
+    const { userId } = req.params
+    const userProfileToEdit = await User.findById(userId) 
+    if (!userProfileToEdit) throw new Unauthorized()
+    Object.assign(userProfileToEdit, req.body)
+    await userProfileToEdit.save()
+    res.status(201).json(userProfileToEdit)
+  } catch (err) {
+    next(err)
+  }
+
+}
 
 
 export default {
   show: getUserProfile,
   logIn: accessUserProfile,
   signUp: createUserProfile,
+  edit: editUserProfile,
 }
