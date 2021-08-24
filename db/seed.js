@@ -1,3 +1,5 @@
+import faker from 'faker'
+
 import Image from '../models/imageModel.js'
 import User from '../models/userModel.js'
 import { connectDb, truncateDb, disconnectDb } from '../db/helper.js'
@@ -12,7 +14,7 @@ async function seed(){
     await truncateDb()
     console.log('💾 Database dropped')
 
-    const user = await User.create({
+    const adminUser = await User.create({
       username: 'Admin',
       email: 'admin@mail.com',
       password: 'pass',
@@ -24,14 +26,42 @@ async function seed(){
 
     console.log('💾 Admin created')
 
+
+    const users = []
+
+    for (let index = 0; index < 50; index++) {
+      const username = faker.internet.userName()
+      const firstName = faker.name.firstName()
+      const email = `${firstName}${index}@email.com`
+      users.push({
+        username,
+        email,
+        isAdmin: false,
+        myCollections: [],
+        myFollows: [],
+        password: 'pass',
+        passwordConfirmation: 'pass',
+      })
+    }
+
+    const createdUsers = await User.create(users)
+
+    console.log('💾 50 Users created')
+
+
     imageData.forEach(image => {
-      image.addedBy = user
+      image.addedBy = createdUsers[Math.floor(Math.random() * users.length)] 
     })
+
+    console.log('💾 Images assigned users')
+    
 
     const image = await Image.create(imageData)
 
     console.log(`Number of images added: ${image.length},
-                Image info: ${image}`)
+                Image info: ${image}
+                Admin user: ${adminUser}
+                Users added: ${createdUsers.length}`)
 
   } catch (error) {
     console.log('Something went wrong')

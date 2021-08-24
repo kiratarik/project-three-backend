@@ -1,10 +1,12 @@
 import User from '../models/userModel.js'
 import jwt from 'jsonwebtoken'
 import { secret } from '../config/configData.js'
+import { Unauthorized } from '../lib/errors.js'
 
 async function getUserProfile( req, res, next ) {
   try {
-    const userProfile = await User.findOne({ email: req.body.email })
+    const { userId } = req.params
+    const userProfile = await User.findById(userId)
     if (!userProfile) throw new Error()
     return res.status(200).json({
       id: `${userProfile._id}`,
@@ -32,7 +34,7 @@ async function createUserProfile( req, res, next ){
 async function accessUserProfile( req, res, next){
   try {
     const userProfile = await User.findOne({ email: req.body.email })          
-    if (!userProfile || !userProfile.validatePassword(req.body.password)) throw new Error()
+    if (!userProfile || !userProfile.validatePassword(req.body.password)) throw new Unauthorized()
 
     const token = jwt.sign({ sub: userProfile._id }, secret, { expiresIn: '1 day' })
 

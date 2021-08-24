@@ -16,6 +16,13 @@ const userSchema = mongoose.Schema({
   myFollows: [{ type: mongoose.Schema.ObjectId, ref: 'User' }],
 })
 
+userSchema.set('toJSON', {
+  transform(_doc, json) {
+    delete json.password
+    return json
+  },
+})
+
 userSchema
   .virtual('passwordConfirmation')
   .set(function(passwordConfirmation){
