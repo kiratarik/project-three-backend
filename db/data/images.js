@@ -209,11 +209,143 @@ export default [
     picName: 'Mountains across the valley in China',
     tags: {
       types: ['Mountains', 'Valley'],
-      locations: ['Asia', `People's Republic of China`, 'Barkam'],
+      locations: ['Asia', 'People\'s Republic of China', 'Barkam'],
       customs: [],
     },
     latitude: 31.8994,
     longitude: 102.2247,
+  },
+
+  {
+    url: 'https://images.unsplash.com/photo-1628093841756-f940f1fe0415?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
+    picName: 'Mountains across the valley in China',
+    tags: {
+      types: ['Mountains', 'Valley'],
+      locations: ['Asia', 'People\'s Republic of China', 'Barkam'],
+      customs: [],
+    },
+    latitude: 31.8994,
+    longitude: 102.2247,
+  },
+
+  {
+    url: 'https://images.unsplash.com/photo-1628277590088-0777c8a89a08?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
+    picName: 'The coast in Croatia',
+    tags: {
+      types: ['Ocean'],
+      locations: ['Europe', 'Croatia'],
+      customs: [],
+    },
+    latitude: 44.8031,
+    longitude: 13.9127,
+  },
+
+  {
+    url: 'https://images.unsplash.com/photo-1523208360002-17cb75b53e1a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
+    picName: 'Palm trees in the USA',
+    tags: {
+      types: ['Desert'],
+      locations: ['USA'],
+      customs: [],
+    },
+    latitude: 33.985,
+    longitude: 118.4695,
+  },
+
+  {
+    url: 'https://images.unsplash.com/photo-1618984265001-4198e2d91963?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=564&q=80',
+    picName: 'A shark swimming in the Maldives',
+    tags: {
+      types: ['Ocean'],
+      locations: ['Maldives'],
+      customs: [],
+    },
+    latitude: 3.2028,
+    longitude: 73.2207,
+  },
+
+  {
+    url: 'https://images.unsplash.com/photo-1588001303398-35b3313307c0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=658&q=80',
+    picName: 'A misty morning in the USA',
+    tags: {
+      types: ['Meadow'],
+      locations: [ 'Wisconsin','USA'],
+      customs: [],
+    },
+    latitude: 3.2028,
+    longitude: 73.2207,
+  },
+
+  {
+    url: 'https://images.unsplash.com/photo-1588001303398-35b3313307c0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=658&q=80',
+    picName: 'A misty morning in the USA',
+    tags: {
+      types: ['Meadow'],
+      locations: [ 'Wisconsin','USA'],
+      customs: [],
+    },
+    latitude: 43.5391,
+    longitude: 89.4626,
+  },
+
+  {
+    url: 'https://images.unsplash.com/photo-1629497304206-9122964fecb8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80',
+    picName: 'Groyne in the Ocean in Germany',
+    tags: {
+      types: ['Ocean'],
+      locations: [ 'Europe','Germany'],
+      customs: [],
+    },
+    latitude: 54.1703,
+    longitude: 12.0784,
+  },
+
+  {
+    url: 'https://images.unsplash.com/photo-1623039142047-3567eb7a208d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80',
+    picName: 'Sunset in Greece',
+    tags: {
+      types: ['Ocean'],
+      locations: [ 'Europe','Greece'],
+      customs: [],
+    },
+    latitude: 41.4523,
+    longitude: 26.2076,
+  },
+
+  {
+    url: 'https://images.unsplash.com/photo-1623081640407-8a0b9b8f5b84?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
+    picName: 'The Death Valley desert',
+    tags: {
+      types: ['Desert'],
+      locations: [ 'USA'],
+      customs: [],
+    },
+    latitude: 36.5323,
+    longitude: 116.9325,
+  },
+
+  {
+    url: 'https://images.unsplash.com/photo-1601688313659-a13aa022df02?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
+    picName: 'Sunrise in Saint Paul, USA ',
+    tags: {
+      types: ['Forest'],
+      locations: [ 'USA'],
+      customs: [],
+    },
+    latitude: 44.9537,
+    longitude: 93.09,
+  },
+
+  {
+    url: 'https://images.unsplash.com/photo-1572905652481-6d8397b1b09c?ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+    picName: 'Sunset on the beach in Hawaii ',
+    tags: {
+      types: ['Ocean'],
+      locations: [ 'USA'],
+      customs: [],
+    },
+    latitude: 19.896767,
+    longitude: -155.582779,
   }
 
 
