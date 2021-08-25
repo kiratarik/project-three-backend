@@ -11,6 +11,7 @@ async function getUserProfile( req, res, next ) {
     return res.status(200).json({
       _id: `${userProfile._id}`,
       username: `${userProfile.username}`,
+      email: `${userProfile.email}`,
       myCollections: userProfile.myCollections,
       myFollowing: userProfile.myFollows,
     })
