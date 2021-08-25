@@ -9,10 +9,10 @@ async function getUserProfile( req, res, next ) {
     const userProfile = await User.findById(userId)
     if (!userProfile) throw new Error()
     return res.status(200).json({
-      id: `${userProfile._id}`,
-      userName: `${userProfile.username}`,
-      collections: `${userProfile.myCollections}`,
-      following: `${userProfile.myFollows}`,
+      _id: `${userProfile._id}`,
+      username: `${userProfile.username}`,
+      myCollections: userProfile.myCollections,
+      myFollowing: userProfile.myFollows,
     })
   } catch (err) {
     next(err)
