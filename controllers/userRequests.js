@@ -1,7 +1,7 @@
 import User from '../models/userModel.js'
 import jwt from 'jsonwebtoken'
 import { secret } from '../config/configData.js'
-import { contentError, Unauthorized } from '../lib/errors.js'
+import { Unauthorized } from '../lib/errors.js'
 
 async function getUserProfile( req, res, next ) {
   try {
@@ -52,10 +52,6 @@ async function editUserProfile( req, res, next){
     const userProfileToEdit = await User.findById(userId) 
     if (!userProfileToEdit) throw new Unauthorized()
     Object.assign(userProfileToEdit, req.body)
-    if (userProfileToEdit.username === req.body.username ||
-        userProfileToEdit.email === req.body.email){
-      throw new contentError()
-    }
     await userProfileToEdit.save()
     res.status(201).json(userProfileToEdit)
   } catch (err) {
