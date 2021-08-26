@@ -8,8 +8,8 @@ export default [
       locations: ['Norway'], //Error
       customs: [],
     },
-    latitude: 52.760368,
-    longitude: 7.83678,
+    latitude: 60.4720,
+    longitude: 8.4689,
   } ,
 
   {
@@ -44,8 +44,8 @@ export default [
       locations: ['USA'], //Error
       customs: [],
     },
-    latitude: 39.81065,
-    longitude: 3.11413,
+    latitude: 43.7844,
+    longitude: 88.7879,
   },
 
   {
@@ -217,18 +217,6 @@ export default [
   },
 
   {
-    url: 'https://images.unsplash.com/photo-1628093841756-f940f1fe0415?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
-    picName: 'Mountains across the valley in China',
-    tags: {
-      types: ['Mountains', 'Valley'],
-      locations: ['Asia', 'People\'s Republic of China', 'Barkam'],
-      customs: [],
-    },
-    latitude: 31.8994,
-    longitude: 102.2247,
-  },
-
-  {
     url: 'https://images.unsplash.com/photo-1628277590088-0777c8a89a08?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
     picName: 'The coast in Croatia',
     tags: {
@@ -258,18 +246,6 @@ export default [
     tags: {
       types: ['Ocean'],
       locations: ['Maldives'],
-      customs: [],
-    },
-    latitude: 3.2028,
-    longitude: 73.2207,
-  },
-
-  {
-    url: 'https://images.unsplash.com/photo-1588001303398-35b3313307c0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=658&q=80',
-    picName: 'A misty morning in the USA',
-    tags: {
-      types: ['Meadow'],
-      locations: [ 'Wisconsin','USA'],
       customs: [],
     },
     latitude: 3.2028,
@@ -346,8 +322,175 @@ export default [
     },
     latitude: 19.896767,
     longitude: -155.582779,
-  }
+  },
 
+  {
+    url: 'https://images.unsplash.com/photo-1623420254193-48ee2172cd87?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
+    picName: 'Bryce Canyon, Utah, USA',
+    tags: {
+      types: ['Desert'],
+      locations: [ 'USA'],
+      customs: ['Canyon'],
+    },
+    latitude: 37.672370,
+    longitude: -112.156840,
+  },
+
+  {
+    url: 'https://images.unsplash.com/photo-1623527859001-8010a15cf790?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80',
+    picName: 'Sunset at Belaya Rock, Russia',
+    tags: {
+      types: ['Valley'],
+      locations: ['Crimea'],
+      customs: ['Rock formation'],
+    },
+    latitude: 65.2234,
+    longitude: 41.23,
+  },
+
+  {
+    url: 'https://images.unsplash.com/photo-1602167775512-a6adbd35b2e2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80',
+    picName: 'Dusk in Colle del Nivolet, Valsavarenche, AO, Italy',
+    tags: {
+      types: ['Valley', 'Mountains'],
+      locations: ['Italy'],
+      customs: ['Dusk'],
+    },
+    latitude: 45.49069,
+    longitude: 7.14803,
+  },
+
+  {
+    url: 'https://images.unsplash.com/photo-1518997828729-f13e7f6e66b0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=676&q=80',
+    picName: 'Storm at Reynisfjara Beach in Iceland',
+    tags: {
+      types: ['Valley', 'Mountains'],
+      locations: ['Iceland'],
+      customs: ['Dusk'],
+    },
+    latitude: 51.671471,
+    longitude: -9.47621,
+  },
+
+  {
+    url: 'https://images.unsplash.com/photo-1614867517189-34c259f98b17?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
+    picName: 'Storm coming in over beach in Australia ',
+    tags: {
+      types: ['Beach', 'Cliffs'],
+      locations: ['Australia'],
+      customs: ['12 Apostles rock'],
+    },
+    latitude: 38.6621,
+    longitude: 143.1051,
+  },
+
+  {
+    url: 'https://images.unsplash.com/photo-1623967680551-3e4694e2c9ad?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
+    picName: 'Woodland walk in the Netherlands',
+    tags: {
+      types: ['Forest'],
+      locations: ['Netherlands'],
+      customs: ['Path'],
+    },
+    latitude: 52.00862,
+    longitude: 4.3964,
+  },
+
+  {
+    url: 'https://images.unsplash.com/photo-1503614418835-dc720bf59271?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=633&q=80',
+    picName: 'Misty day at Toleak Point, USA',
+    tags: {
+      types: ['Ocean'],
+      locations: ['USA'],
+      customs: ['Island'],
+    },
+    latitude: 35.95397,
+    longitude: -80.00394,
+  },
+
+  {
+    url: 'https://images.unsplash.com/photo-1613688326641-06389bb07197?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80',
+    picName: 'Glaciers floating in the sea, Iceland',
+    tags: {
+      types: ['Ocean'],
+      locations: ['Iceland'],
+      customs: ['Cold Ocean'],
+    },
+    latitude: 64.963051,
+    longitude: -19.020836,
+  },
+
+  {
+    url: 'https://images.unsplash.com/photo-1623393571710-45492f7f91a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80',
+    picName: 'Waterfall in Austria',
+    tags: {
+      types: ['Mountain', 'Ocean'],
+      locations: ['Austria'],
+      customs: ['Waterfall'],
+    },
+    latitude: 47.02861,
+    longitude: 10.7468,
+  },
+
+  {
+    url: 'https://images.unsplash.com/photo-1530565435120-7f79080ea623?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80',
+    picName: 'Rock formations at Yellow Stone National Park, USA',
+    tags: {
+      types: ['Mountain', 'Valley'],
+      locations: ['USA'],
+      customs: ['Rock formations'],
+    },
+    latitude: 47.02861,
+    longitude: 10.7468,
+  },
+
+  {
+    url: 'https://images.unsplash.com/photo-1531021713651-fdd4ac075ac1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
+    picName: 'A bamboo forest in Japan',
+    tags: {
+      types: ['Forest'],
+      locations: ['Japan'],
+      customs: ['Bamboo'],
+    },
+    latitude: 35.016954,
+    longitude: 135.670451,
+  },
+
+  {
+    url: 'https://images.unsplash.com/photo-1624624316541-526c44363245?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
+    picName: 'A cloudy sky in Armenia',
+    tags: {
+      types: ['Valley'],
+      locations: ['Armenia'],
+      customs: ['Sky'],
+    },
+    latitude: 4.53289,
+    longitude: -75.677856,
+  },
+
+  {
+    url: 'https://images.unsplash.com/photo-1501525630906-79bad890218a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=648&q=80',
+    picName: 'A desert valley in Utah, USA',
+    tags: {
+      types: ['Valley', 'Desert'],
+      locations: ['USA'],
+      customs: [],
+    },
+    latitude: 39.32098,
+    longitude: -111.093735,
+  },
+
+  {
+    url: 'https://images.unsplash.com/photo-1608697005000-2be78a1f1023?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80',
+    picName: 'Sunset over the waves in Goa, India',
+    tags: {
+      types: ['Beach'],
+      locations: ['India'],
+      customs: [],
+    },
+    latitude: 15.53993,
+    longitude: 73.763687,
+  }
 
 ]
 
