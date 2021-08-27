@@ -490,7 +490,160 @@ export default [
     },
     latitude: 15.53993,
     longitude: 73.763687,
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1624704765330-a39464d6a641?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80',
+    picName: 'A drive through the Lake to the mountains',
+    tags: {
+      types: ['Lake', 'Mountains', 'Valley'],
+      locations: ['Norway'],
+      customs: ['Dark','Clear', 'Man-made'],
+    },
+    latitude: 68.0821,
+    longitude: 13.16756,
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1619371208402-615001f13a45?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
+    picName: 'A house surrounded by the Dolomite rock formations',
+    tags: {
+      types: ['Mountains', 'Valley'],
+      locations: ['Italy'],
+      customs: ['Dramatic', 'Isolated', 'Clouds'],
+    },
+    latitude: 46.47031,
+    longitude: 11.72885,
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1624993085607-aa93b6e72ac9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=564&q=80',
+    picName: 'Bird perched on a branch in Ontario',
+    tags: {
+      types: ['Forest','Meadow'],
+      locations: ['Canada'],
+      customs: ['Bird', 'Nature', 'Focus'],
+    },
+    latitude: 51.253777,
+    longitude: -85.323212,
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1619408507347-03b1e31851c5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=633&q=80',
+    picName: 'Layers of mountains, dunes and planes in Colorado',
+    tags: {
+      types: ['Mountains','Valley'],
+      locations: ['USA'],
+      customs: ['Dunes','Planes','Preserve'],
+    },
+    latitude: 37.77336,
+    longitude: -105.50653,
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1601979485748-a53411ad7fbc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
+    picName: 'Snowy mountain range in Zwischbergen, Switzerland',
+    tags: {
+      types: ['Mountains','Valley'],
+      locations: ['Switzerland'],
+      customs: ['Snow'],
+    },
+    latitude: 46.16216,
+    longitude: 8.11452,
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1625037619854-2adb433bae62?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=675&q=80',
+    picName: 'Cliff overlooking the ocean drenched in the light of the setting sun',
+    tags: {
+      types: ['Meadow','Cliff', 'Ocean'],
+      locations: ['France'],
+      customs: ['Sunset'],
+    },
+    latitude: 50.74724,
+    longitude: 1.60297,
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1613422659908-80ee920bfde0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=613&q=80',
+    picName: 'Rocky and icy cove in  Kullaberg, Sweden',
+    tags: {
+      types: ['Ocean'],
+      locations: ['Sweden'],
+      customs: ['Ice','Cove'],
+    },
+    latitude: 58.58972,
+    longitude: 11.2946,
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1625119487457-08b5f1c2087c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
+    picName: 'Starry night in Escalante',
+    tags: {
+      types: ['Forest'],
+      locations: ['Argentina'],
+      customs: ['Stars','Constellation'],
+    },
+    latitude: -45.87084,
+    longitude: -67.48931,
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1501371703172-850ab6b6e282?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=707&q=80',
+    picName: 'Violet haze in Glacier National Park',
+    tags: {
+      types: ['Mountains','Valley'],
+      locations: ['USA'],
+      customs: [''],
+    },
+    latitude: 48.50145,
+    longitude: -113.98481,
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1534709333714-775101d963c8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=638&q=80',
+    picName: 'Long exposure shot on Salt planes Iran',
+    tags: {
+      types: ['Lake', 'Desert'],
+      locations: ['Iran'],
+      customs: ['Planes', 'Astro-photography'],
+    },
+    latitude: 35.53141,
+    longitude: -82.97663,
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1497377701144-65a4a020f4c9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=714&q=80',
+    picName: 'Dramatic contrast between river and land in Phalaborwa',
+    tags: {
+      types: ['Lake','Forest'],
+      locations: ['South Africa'],
+      customs: ['River','Pink'],
+    },
+    latitude: -23.94973,
+    longitude: 31.137939,
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1625602627357-c033225fd774?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
+    picName: 'Balancing boulders on a cliff face in Percha, Italy',
+    tags: {
+      types: ['Cliff','Forest'],
+      locations: ['Italy'],
+      customs: [''],
+    },
+    latitude: 46.79163,
+    longitude: 11.99393,
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1550133804-0d34e3130759?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=675&q=80',
+    picName: 'Frozen streams run through the Chamonix mountains',
+    tags: {
+      types: ['Mountains'],
+      locations: ['France'],
+      customs: ['Ice','Stream'],
+    },
+    latitude: 45.92289,
+    longitude: 6.87546,
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1595960684234-49d2a004e753?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=628&q=80',
+    picName: 'Kayaking through Gasperau Lake',
+    tags: {
+      types: ['Lake'],
+      locations: ['Canada'],
+      customs: ['Aeriel'],
+    },
+    latitude: 45.06606,
+    longitude: -64.35266,
   }
-
 ]
 
